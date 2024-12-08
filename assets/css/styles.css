@@ -16,7 +16,6 @@ body {
     max-width: 1380px;
     margin: 0 auto;
     letter-spacing: 2px;
-    pointer-events: none;
     user-select: none;
 }
 nav {
