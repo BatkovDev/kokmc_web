@@ -1,0 +1,281 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'MD', Arial;
+
+    --padside: 14.7%;
+}
+
+@font-face {
+    font-family: 'MD';
+    src: url('../fonts/minecrafter-dungeons.ttf');
+}
+
+body {
+    background: #0D0B10;
+    max-width: 1380px;
+    margin: 0 auto;
+    letter-spacing: 2px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo img {
+    max-width: 200px;
+    width: auto;
+    height: 100%;
+}
+
+nav .links {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+}
+nav .links .item a {
+    padding: 3px 6px;
+    text-decoration: none;
+    color: #30273B;
+    font-size: 15px;
+    position: relative;
+    letter-spacing: 1px;
+    transition: .14s;
+}
+nav .links .item.active a {
+    color: #fff;
+}
+nav .links .item a::after {
+    content: '';
+    background: #fff;
+    width: 0;
+    height: 4px;
+    position: absolute;
+    bottom: -4px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: .14s;
+}
+nav .links .item:not(.active):hover a {
+    color: #90889a;
+}
+nav .links .item.active a::after,
+nav .links .item:hover a::after {
+    width: calc(90% - 3px);
+}
+
+nav .actions a {
+    position: relative;
+    text-decoration: none;
+    padding: 8px 12px;
+    background-color: #6475E2;
+    color: #000;
+    /* box-shadow: rgba(100,117,226,.5) 0 2px 20px; */
+    border-radius: 10px;
+    transition: .2s;
+}
+nav .actions a::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: unset;
+    box-shadow: rgba(100,117,226,1) 0 2px 30px;
+    width: 75%;
+    height: 100%;
+    z-index: -1;
+}
+
+nav .actions a:hover {
+    background-color: #6e7ac5;
+    box-shadow: rgba(100,117,226,.9) 0 2px 15px;
+}
+
+header {
+    padding: 20px var(--padside);
+    position: relative;
+    height: 100vh;
+    max-height: 900px;
+    display: flex;
+    flex-direction: column;
+}
+
+header .content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+header h1 {
+    color: #fff;
+    font-size: 42px;
+}
+
+header .description_ {
+    margin-top: 10px;
+    color: #30273B;
+    font-size: 14px;
+}
+
+header button#how-to-play {
+    border: unset;
+    position: relative;
+    margin-top: 20px;
+    background-color: #6DE264;
+    border-radius: 0.5rem;
+    font-size: 20px;
+    width: fit-content;
+    padding: 1.2rem 5rem;
+    cursor: pointer;
+    transition: .2s;
+}
+header button#how-to-play::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: unset;
+    border-radius: 50px;
+    box-shadow: rgba(109, 226, 100,.8) 0 2px 50px;
+    width: 90%;
+    height: 100%;
+    z-index: -1;
+    transition: .2s;
+}
+header button#how-to-play:hover {
+    opacity: .9;
+}
+header button#how-to-play:hover::before {
+    box-shadow: rgba(109, 226, 100,.8) 0 2px 70px;
+}
+
+header .r-img {
+    position: absolute;
+    max-width: 50%;
+    height: auto;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 5%;
+    z-index: -1;
+}
+
+
+
+main {
+    margin-top: 20px;
+}
+
+main .container {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 var(--padside);
+    gap: 50px;
+}
+
+main .container ._item {
+    text-align: center;
+}
+main .container ._item h2 {
+    font-size: 28px;
+    color: #fff;
+    margin-bottom: 10px;
+}
+main .container ._item .preview {
+    max-width: 480px;
+    aspect-ratio: 16/9;
+    border-radius: 10px;
+}
+/* global news */
+main .container ._item .action#g-news-btn {
+    background-color: #6475E2;
+}
+main .container ._item .action#g-news-btn::before {
+    box-shadow: rgba(100, 117, 226,.8) 0 2px 40px;
+}
+main .container ._item .action#g-news-btn:hover::before {
+    box-shadow: rgba(100, 117, 226,.8) 0 2px 30px;
+}
+
+/* donate */
+main .container ._item .action#donate-btn {
+    background-color: rgb(215, 102, 112);
+}
+main .container ._item .action#donate-btn::before {
+    box-shadow: rgba(226, 100, 100,.8) 0 2px 40px;
+}
+main .container ._item .action#donate-btn:hover::before {
+    box-shadow: rgba(226, 100, 100,.8) 0 2px 30px;
+}
+
+main .container ._item .action {
+    border: unset;
+    position: relative;
+    margin: 30px 0;
+    background-color: #6475E2;
+    border-radius: 0.5rem;
+    font-size: 30px;
+    width: 80%;
+    padding: 1.2rem 5rem;
+    cursor: pointer;
+    transition: .2s;
+}
+main .container ._item .action::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: unset;
+    border-radius: 50px;
+    box-shadow: rgba(100, 117, 226,.8) 0 2px 40px;
+    width: 90%;
+    height: 100%;
+    z-index: -2;
+    transition: .2s;
+}
+main .container ._item .action:hover {
+    opacity: .9;
+}
+main .container ._item .action:hover::before {
+    box-shadow: rgba(100, 117, 226,.8) 0 2px 30px;
+}
+
+
+
+footer {
+    border-top: 4px solid #30273B;
+    margin: 15px var(--padside);
+    padding: 10px 0;
+}
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    padding-left: 70px;
+}
+footer .container p {
+    line-height: 1.2;
+    font-size: 14px;
+}
+footer .container .actions {
+    text-align: center;
+    gap: 3px;
+    margin: 4px 0;
+}
+footer .container .actions a {
+    text-decoration: none;
+}
+footer .container .actions a img {
+    width: 30px;
+    height: 30px;
+}
+
+footer .logo img {
+    max-width: 160px;
+    width: 100%;
+    height: auto;
+}
